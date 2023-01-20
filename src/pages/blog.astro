@@ -11,7 +11,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
@@ -41,7 +41,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						posts.map((post) => (
 							<li>
 								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+									{new Date(post.frontmatter.pubDate).toLocaleDateString('ja-jp', {
 										year: 'numeric',
 										month: 'short',
 										day: 'numeric',
